@@ -16,11 +16,15 @@ var App = angular.module('app', [
 // Router configuration
 App.config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/angularjs');
+        $urlRouterProvider.otherwise('/login');
         $stateProvider
             .state('angularjs', {
                 url: '/angularjs',
                 templateUrl: 'assets/views/ready_angularjs.html'
+            })
+            .state('/login', {
+                url: '/login',
+                templateUrl: 'assets/views/apricon/login.html'
             })
             .state('dashboard', {
                 url: '/dashboard',
