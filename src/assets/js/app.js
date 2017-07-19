@@ -443,7 +443,7 @@ App.config(['$stateProvider', '$urlRouterProvider',
             })
             .state('main-menu', {
                 url: '/main-menu',
-                templateUrl: 'assets/views/apricon/basic.html'
+                templateUrl: 'assets/views/apricon/mainmenu.html'
             })
             .state('layout', {
                 url: '/layout',
