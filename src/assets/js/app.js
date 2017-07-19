@@ -16,15 +16,23 @@ var App = angular.module('app', [
 // Router configuration
 App.config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/login');
+        $urlRouterProvider.otherwise('/dashboard');
         $stateProvider
             .state('angularjs', {
                 url: '/angularjs',
                 templateUrl: 'assets/views/ready_angularjs.html'
             })
+            .state('/splash', {
+                url: '/splash',
+                templateUrl: 'assets/views/apricon/splash.html'
+            })
             .state('/login', {
                 url: '/login',
                 templateUrl: 'assets/views/apricon/login.html'
+            })
+            .state('/dashboard', {
+                url: '/dashboard',
+                templateUrl: 'assets/views/apricon/dashboard.html'
             })
             .state('dashboard', {
                 url: '/dashboard',
@@ -433,9 +441,9 @@ App.config(['$stateProvider', '$urlRouterProvider',
                     }]
                 }
             })
-            .state('blocks', {
-                url: '/blocks',
-                templateUrl: 'assets/views/api_blocks.html'
+            .state('main-menu', {
+                url: '/main-menu',
+                templateUrl: 'assets/views/apricon/basic.html'
             })
             .state('layout', {
                 url: '/layout',
@@ -787,7 +795,7 @@ App.controller('AppCtrl', ['$scope', '$localStorage', '$window',
     function ($scope, $localStorage, $window) {
         // Template Settings
         $scope.oneui = {
-            version: '3.1', // Template version
+            version: '1.0.0', // Template version
             localStorage: false, // Enable/Disable local storage
             settings: {
                 activeColorTheme: false, // Set a color theme of your choice, available: 'amethyst', 'city, 'flat', 'modern' and 'smooth'
