@@ -16,7 +16,7 @@ var App = angular.module('app', [
 // Router configuration
 App.config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/dashboard');
+        $urlRouterProvider.otherwise('/basic');
         $stateProvider
             .state('angularjs', {
                 url: '/angularjs',
@@ -33,6 +33,10 @@ App.config(['$stateProvider', '$urlRouterProvider',
             .state('/dashboard', {
                 url: '/dashboard',
                 templateUrl: 'assets/views/apricon/dashboard.html'
+            })
+            .state('/basic', {
+                url: '/basic',
+                templateUrl: 'assets/views/apricon/basic.html'
             })
             .state('dashboard', {
                 url: '/dashboard',

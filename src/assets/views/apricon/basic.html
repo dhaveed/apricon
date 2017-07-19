@@ -37,7 +37,7 @@
                             <div class="col-sm-9">
                                 <div class="form-material">
                                     <input class="form-control" type="text" id="product-density" name="product-density" placeholder="Enter density of product..">
-                                    <label for="product-density">Density</label>
+                                    <label for="product-density">Density (kg/m3)</label>
                                 </div>
                             </div>
                         </div>
@@ -45,15 +45,31 @@
                             <div class="col-sm-9">
                                 <div class="form-material">
                                     <input class="form-control" type="text" id="paint-thickness" name="paint-thickness" placeholder="Enter average paint thickness..">
-                                    <label for="paint-thickness">Paint</label>
+                                    <label for="paint-thickness">Paint thickness (mm)</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                        	<div class="col-sm-9">
+                        	<div class="col-xs-9">
                         		<div class="form-material">
-                        			<input data-js-tags-input class="form-control" type="text" id="course-circumference" name="course-circumference" placeholder="Enter circumference for each course..">
-                        			<label for="course-circumference">Circumference</label>
+                        			<input data-js-tags-input class="form-control" type="text" id="example-tags2" name="example-tags2" value="Eg: 5, 6">
+                        			<label for="example-tags2">Circumference for each course (mm)</label>
+                        		</div>
+                        	</div>
+                        </div>
+                        <div class="form-group">
+                        	<div class="col-xs-9">
+                        		<div class="form-material">
+                        			<input data-js-tags-input class="form-control" type="text" id="example-tags2" name="example-tags2" value="Eg: 5, 6">
+                        			<label for="example-tags2">Height for each course (mm)</label>
+                        		</div>
+                        	</div>
+                        </div>
+                        <div class="form-group">
+                        	<div class="col-xs-9">
+                        		<div class="form-material">
+                        			<input data-js-tags-input class="form-control" type="text" id="example-tags2" name="example-tags2" value="Eg: 5, 6">
+                        			<label for="example-tags2">Shell plate thickness for each course (mm)</label>
                         		</div>
                         	</div>
                         </div>
@@ -62,7 +78,7 @@
                             <div class="col-sm-9">
                                 <div class="form-material">
                                     <select class="form-control" id="val-select22" name="val-select22" style="width: 100%;" data-placeholder="Choose one.." data-js-select2>
-                                        <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                                        <option value="">Select level</option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -75,110 +91,83 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                        	<div class="col-sm-9">
+                        		<div class="form-material">
+                        			<input class="form-control" type="text" id="dthick" name="dthick" placeholder="Enter thickness of datum plate..">
+                        			<label for="dthick">Datum thickness (mm)</label>
+                        		</div>
+                        	</div>
+                        </div>
                         <div class="form-group">
                             <div class="col-sm-9">
                                 <div class="form-material">
-                                    <select class="form-control" id="val-select2-multiple2" name="val-select2-multiple2" style="width: 100%;" data-placeholder="Choose at least two.." multiple data-js-select2>
-                                        <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
-                                        <option value="1">HTML</option>
-                                        <option value="2">CSS</option>
-                                        <option value="3">JavaScript</option>
-                                        <option value="4">PHP</option>
-                                        <option value="5">MySQL</option>
-                                        <option value="6">Ruby</option>
-                                        <option value="7">AngularJS</option>
+                                    <input class="form-control" type="text" id="ndia" name="ndia" placeholder="Enter norminal diameter of tank..">
+                                    <label for="ndia">Norminal diameter (mm)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-9">
+                                <div class="form-material">
+                                    <input class="form-control" type="text" id="bstrp" name="bstrp" placeholder="Enter number of bult strap..">
+                                    <label for="bstrp">Bult strap</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-9">
+                                <div class="form-material">
+                                    <input class="form-control" type="text" id="bthick" name="bthick" placeholder="Enter bult strap thickness..">
+                                    <label for="bthick">Bult strap thickness (mm)</label>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <div class="col-sm-9">
+                                <div class="form-material">
+                                    <input class="form-control" type="text" id="wstrp" name="wstrp" placeholder="Enter width of bult strap..">
+                                    <label for="wstrp">Bult strap width (mm)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-9">
+                                <div class="form-material">
+                                    <select class="form-control" id="dmethod" name="dmethod">
+                                        <option value="">Select method</option>
+                                        <option value="wet">WET</option>
+                                        <option value="dry">DRY</option>
                                     </select>
-                                    <label for="val-select2-multiple2">Select2 Multiple</label>
+                                    <label for="dmethod">Deadstock method</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-sm-12">
-                                <div class="form-material">
-                                    <textarea class="form-control" id="val-suggestions2" name="val-suggestions2" rows="3" placeholder="Share your ideas with us.."></textarea>
-                                    <label for="val-suggestions2">Suggestions</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-9">
-                                <div class="form-material">
-                                    <select class="form-control" id="val-skill2" name="val-skill2">
-                                        <option value="">Please select</option>
-                                        <option value="html">HTML</option>
-                                        <option value="css">CSS</option>
-                                        <option value="javascript">JavaScript</option>
-                                        <option value="ruby">Ruby</option>
-                                        <option value="php">PHP</option>
-                                        <option value="asp">ASP.NET</option>
-                                        <option value="python">Python</option>
-                                        <option value="mysql">MySQL</option>
-                                    </select>
-                                    <label for="val-skill2">Best Skill</label>
-                                </div>
-                            </div>
+                        	<div class="col-sm-9">
+                        		<div class="form-material">
+                        			<input class="form-control" type="text" id="volume" name="volume" placeholder="Enter volume of deadstock..">
+                        			<label for="volume">Deadstock volume (litres)</label>
+                        		</div>
+                        	</div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-9">
                                 <div class="form-material">
-                                    <input class="form-control" type="text" id="val-currency2" name="val-currency2" placeholder="$30.50">
-                                    <label for="val-currency2">Currency</label>
+                                    <input class="form-control" type="text" id="temp" name="temp" placeholder="Enter temperature of tank..">
+                                    <label for="temp">Temperature (Degree Centigrate)</label>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-9">
-                                <div class="form-material">
-                                    <input class="form-control" type="text" id="val-phoneus2" name="val-phoneus2" placeholder="212-999-0000">
-                                    <label for="val-phoneus2">Phone (US)</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-9">
-                                <div class="form-material">
-                                    <input class="form-control" type="text" id="val-website2" name="val-website2" placeholder="http://example.com">
-                                    <label for="val-website2">Website</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-9">
-                                <div class="form-material">
-                                    <input class="form-control" type="text" id="val-digits2" name="val-digits2" placeholder="3">
-                                    <label for="val-digits2">Digits</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-9">
-                                <div class="form-material">
-                                    <input class="form-control" type="text" id="val-number2" name="val-number2" placeholder="3.0">
-                                    <label for="val-number2">Number</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-9">
-                                <div class="form-material">
-                                    <input class="form-control" type="text" id="val-range2" name="val-range2" placeholder="3">
-                                    <label for="val-range2">Range [1, 5]</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-9">
-                                <div>
-                                    <label>Terms <span class="text-danger">*</span></label>
-                                </div>
-                                <label class="css-input css-checkbox css-checkbox-primary" for="val-terms2">
-                                    <input type="checkbox" id="val-terms2" name="val-terms2" value="1"><span></span> I agree to the terms
-                                </label>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <button class="btn btn-sm btn-primary" type="submit">Submit</button>
+                                <button class="btn btn-sm btn-primary" type="submit">POST</button>
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <div class="col-xs-12">
+                                <button class="btn btn-sm btn-primary" type="submit">VIEW</button>
                             </div>
                         </div>
 						</form>
@@ -188,3 +177,4 @@
 			</div>
 		</div>
 	</div>
+	<!-- DAVID!!! TRY TO SPLIT THEM LEFT AND RIGHT WITH THE BUTTON AREA AT THE BUTTOM CENTER-->
