@@ -8,294 +8,195 @@
 
 <!-- Page Content -->
 <div class="content">
+    <div class="row">
     <!-- Blocks API, functionality is initialized in js/app.js -> uiHelpers Factory -> uiBlocks() -->
-    <h2 class="content-heading">MAIN-MENU</h2>
-    <div class="row">
-        <div class="col-sm-8">
-            <div class="block">
-                <div class="block-content">
-                    <p>Select tab option</p>
-                </div>
-
-            <div class="col-sm-8">
-            <!-- Block Tabs Justified Alternative Style -->
+        <div class="block">
             <div class="block-content">
-                <ul class="nav nav-tabs nav-tabs-alt nav-justified" data-js-tabs>
-                    <li class="active">
-                        <a href="#btabs-alt-static-justified-home"> Basic Tank Details</a>
-                    </li>
-                    <li>
-                        <a href="#btabs-alt-static-justified-profile"> Deadwood</a>
-                    </li>
-                    <li>
-                        <a href="#btabs-alt-static-justified-settings"> Height VS Volume</a>
-                    </li>
-                </ul>
-                <div class="block-content tab-content">
-                    <div class="tab-pane active" id="btabs-alt-static-justified-home">
-                        <h4 class="font-w300 push-15">Basic Tab</h4>
-                        <p ng-data-include="'assets/views/apricon/basic.html'" class="content-mini content-mini-full"></p>
-                    </div>
-                    <div class="tab-pane" id="btabs-alt-static-justified-profile">
-                        <h4 class="font-w300 push-15">Deadwood Tab</h4>
+                <p>Select tab option to view content.</p>    
+            </div> 
+        </div>
+        <div class="block">
+            <ul class="nav nav-tabs nav-tabs-alt nav-justified" data-js-tabs>
+                <li class="active">
+                    <a href="#btabs-alt-static-justified-home"> Basic Tank Details</a>
+                </li>
+                <li>
+                    <a href="#btabs-alt-static-justified-profile"> Deadwood</a>
+                </li>
+                <li>
+                    <a href="#btabs-alt-static-justified-settings"> Height VS Volume</a>
+                </li>
+            </ul>
+            <div class="block-content tab-content">
+                <div class="tab-pane active" id="btabs-alt-static-justified-home">
+                    <h4 class="block-title">Fill the required parameters</h4>
+                    <hr>
+                        <form class="form-horizontal push-30-t" method="post" onsubmit="return false;">
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <div class="form-material">
+                                        <input class="form-control" type="text" id="course-number" name="course-number" placeholder="Enter number of courses..">
+                                        <label for="course-number">Courses</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <div class="form-material">
+                                        <input class="form-control" type="text" id="stored-product" name="stored product" placeholder="Enter product stored..">
+                                        <label for="stored-product">Product</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <div class="form-material">
+                                        <input class="form-control" type="text" id="product-density" name="product-density" placeholder="Enter density of product..">
+                                        <label for="product-density">Density (kg/m3)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <div class="form-material">
+                                        <input class="form-control" type="text" id="paint-thickness" name="paint-thickness" placeholder="Enter average paint thickness..">
+                                        <label for="paint-thickness">Paint thickness (mm)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                    <div class="form-material">
+                                        <input data-js-tags-input class="form-control" type="text" id="example-tags2" name="example-tags2" value="">
+                                        <label for="example-tags2">Circumference for each course (mm)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                    <div class="form-material">
+                                        <input data-js-tags-input class="form-control" type="text" id="example-tags2" name="example-tags2" value="">
+                                        <label for="example-tags2">Height for each course (mm)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                    <div class="form-material">
+                                        <input data-js-tags-input class="form-control" type="text" id="example-tags2" name="example-tags2" value="">
+                                        <label for="example-tags2">Each course shell plate thickness (mm)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Select2 (data-js-select2 attribute is initialized in js/directives.js) -->
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <div class="form-material">
+                                        <select class="form-control" id="val-select22" name="val-select22" style="width: 100%;" data-placeholder="Choose one.." data-js-select2>
+                                            <option value="">Select level</option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                        </select>
+                                        <label for="val-select2">Incremental Level</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <div class="form-material">
+                                        <input class="form-control" type="text" id="dthick" name="dthick" placeholder="Enter thickness of datum plate..">
+                                        <label for="dthick">Datum thickness (mm)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <div class="form-material">
+                                        <input class="form-control" type="text" id="ndia" name="ndia" placeholder="Enter norminal diameter of tank..">
+                                        <label for="ndia">Norminal diameter (mm)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <div class="form-material">
+                                        <input class="form-control" type="text" id="bstrp" name="bstrp" placeholder="Enter number of bult strap..">
+                                        <label for="bstrp">Bult strap</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <div class="form-material">
+                                        <input class="form-control" type="text" id="bthick" name="bthick" placeholder="Enter bult strap thickness..">
+                                        <label for="bthick">Bult strap thickness (mm)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <div class="form-material">
+                                        <input class="form-control" type="text" id="wstrp" name="wstrp" placeholder="Enter width of bult strap..">
+                                        <label for="wstrp">Bult strap width (mm)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <div class="form-material">
+                                        <select class="form-control" id="dmethod" name="dmethod">
+                                            <option value="">Select method</option>
+                                            <option value="wet">WET</option>
+                                            <option value="dry">DRY</option>
+                                        </select>
+                                        <label for="dmethod">Deadstock method</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <div class="form-material">
+                                        <input class="form-control" type="text" id="volume" name="volume" placeholder="Enter volume of deadstock..">
+                                        <label for="volume">Deadstock volume (litres)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4">
+                                    <div class="form-material">
+                                        <input class="form-control" type="text" id="temp" name="temp" placeholder="Enter temperature of tank..">
+                                        <label for="temp">Temperature (Degree Centigrate)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-16">
+                                    <button class="btn btn-sm btn-primary" type="submit">POST</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-16">
+                                    <button class="btn btn-sm btn-primary" type="submit">VIEW</button>
+                                </div>
+                            </div>
+                        </form>
+                </div>
+                <div class="tab-pane" id="btabs-alt-static-justified-profile">
+                    <h4 class="font-w300 push-15">Deadwood Tab</h4>
                         <p>...</p>
-                    </div>
-                    <div class="tab-pane" id="btabs-alt-static-justified-settings">
-                        <h4 class="font-w300 push-15">Rating Tab</h4>
+                </div>
+                <div class="tab-pane" id="btabs-alt-static-justified-settings">
+                    <h4 class="font-w300 push-15">Rating Tab</h4>
                         <p>...</p>
-                    </div>
-                </div>
-            </div>
-            <!-- END Block Tabs Justified Default Style -->
-        </div>
-<!--
-        <div class="col-sm-4">
-            <div class="block" id="my-block">
-                <div class="block-header">
-                    <ul class="block-options">
-                        <li>
-                            <button type="button" data-js-block-option data-action="fullscreen_toggle"></button>
-                        </li>
-                        <li>
-                            <button type="button" data-js-block-option data-action="content_toggle"></button>
-                        </li>
-                    </ul>
-                    <h3 class="block-title">Test Block</h3>
-                </div>
-                <div class="block-content">
-                    <p>This is our test block with id <code>my-block</code></p>
                 </div>
             </div>
         </div>
     </div>
-     END Blocks API 
-
-    <Interactive Blocks (data-js-block-option attribute is initialized in js/directives.js) 
-    In fullscreen and content toggle buttons, icon classes are auto added 
-    <h2 class="content-heading">Interactive Blocks</h2>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="block">
-                <div class="block-header">
-                    <ul class="block-options">
-                        <li>
-                             To toggle block's content, just add the following properties to your button: data-js-block-option data-action="content_toggle" 
-                            <button type="button" data-js-block-option data-action="content_toggle"></button>
-                        </li>
-                    </ul>
-                    <h3 class="block-title">Toggle Content</h3>
-                </div>
-                <div class="block-content">
-                    <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="block">
-                <div class="block-header">
-                    <ul class="block-options">
-                        <li>
-                            <!-- To close a block, just add the following properties to your button: data-js-block-option data-action="close" 
-                            <button type="button" data-js-block-option data-action="close"><i class="si si-close"></i></button>
-                        </li>
-                    </ul>
-                    <h3 class="block-title">Close Block</h3>
-                </div>
-                <div class="block-content">
-                    <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="block">
-                <div class="block-header">
-                    <ul class="block-options">
-                        <li>
-                            <!-- To toggle fullscreen a block, just add the following properties to your button: data-js-block-option data-action="fullscreen_toggle" 
-                            <button type="button" data-js-block-option data-action="fullscreen_toggle"></button>
-                        </li>
-                    </ul>
-                    <h3 class="block-title">Maximize Block</h3>
-                </div>
-                <div class="block-content">
-                    <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="block">
-                <div class="block-header">
-                    <ul class="block-options">
-                        <li>
-                            <!--
-                            To activate loading state to a block, just add the following properties to your button: data-js-block-option data-action="refresh_toggle"
-                            If you also add the property data-action-mode="demo" the loading state will be disabled in 2 seconds for demostration purposes
-
-                            Without the demo mode, you can restore the block to its normal state from your controller by using the following code: $scope.helpers.uiBlocks('yourBlockId','state_normal');
-                            You can use it after you've loaded successfully your data (please check Blocks API)
-                            
-                            <button type="button" data-js-block-option data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
-                        </li>
-                    </ul>
-                    <h3 class="block-title">Refresh</h3>
-                </div>
-                <div class="block-content">
-                    <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12">
-            <div class="block">
-                <div class="block-header">
-                    <ul class="block-options">
-                        <li>
-                            <button type="button" data-js-block-option data-action="fullscreen_toggle"></button>
-                        </li>
-                        <li>
-                            <button type="button" data-js-block-option data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
-                        </li>
-                        <li>
-                            <button type="button" data-js-block-option data-action="content_toggle"></button>
-                        </li>
-                        <li>
-                            <button type="button" data-js-block-option data-action="close"><i class="si si-close"></i></button>
-                        </li>
-                    </ul>
-                    <h3 class="block-title">All Together</h3>
-                </div>
-                <div class="block-content">
-                    <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>
-                    <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END Interactive Blocks 
-
-    <!-- Loading Indicators 
-    <h2 class="content-heading">Loading Indicators</h2>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="block">
-                <div class="block-header">
-                    <ul class="block-options">
-                        <li>
-                            <button type="button" data-js-block-option data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
-                        </li>
-                    </ul>
-                    <h3 class="block-title">Default Icon (Cog)</h3>
-                </div>
-                <div class="block-content">
-                    <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="block block-opt-refresh-icon2">
-                <div class="block-header">
-                    <ul class="block-options">
-                        <li>
-                            <button type="button" data-js-block-option data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
-                        </li>
-                    </ul>
-                    <h3 class="block-title">Icon #2 (Location)</h3>
-                </div>
-                <div class="block-content">
-                    <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="block block-opt-refresh-icon3">
-                <div class="block-header">
-                    <ul class="block-options">
-                        <li>
-                            <button type="button" data-js-block-option data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
-                        </li>
-                    </ul>
-                    <h3 class="block-title">Icon #3 (Energy)</h3>
-                </div>
-                <div class="block-content">
-                    <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="block block-opt-refresh-icon4">
-                <div class="block-header">
-                    <ul class="block-options">
-                        <li>
-                            <button type="button" data-js-block-option data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
-                        </li>
-                    </ul>
-                    <h3 class="block-title">Icon #4 (Refresh)</h3>
-                </div>
-                <div class="block-content">
-                    <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="block block-opt-refresh-icon5">
-                <div class="block-header">
-                    <ul class="block-options">
-                        <li>
-                            <button type="button" data-js-block-option data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
-                        </li>
-                    </ul>
-                    <h3 class="block-title">Icon #5 (Sun)</h3>
-                </div>
-                <div class="block-content">
-                    <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="block block-opt-refresh-icon6">
-                <div class="block-header">
-                    <ul class="block-options">
-                        <li>
-                            <button type="button" data-js-block-option data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
-                        </li>
-                    </ul>
-                    <h3 class="block-title">Icon #6 (OneUI)</h3>
-                </div>
-                <div class="block-content">
-                    <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="block block-opt-refresh-icon7">
-                <div class="block-header">
-                    <ul class="block-options">
-                        <li>
-                            <button type="button" data-js-block-option data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
-                        </li>
-                    </ul>
-                    <h3 class="block-title">Icon #7 (Hourglass)</h3>
-                </div>
-                <div class="block-content">
-                    <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="block block-opt-refresh-icon8">
-                <div class="block-header">
-                    <ul class="block-options">
-                        <li>
-                            <button type="button" data-js-block-option data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
-                        </li>
-                    </ul>
-                    <h3 class="block-title">Icon #8 (Repeat)</h3>
-                </div>
-                <div class="block-content">
-                    <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END Loading Indicators -->
 </div>
 <!-- END Page Content -->
+<!-- DAVID!!! TRY TO SPLIT THEM LEFT AND RIGHT WITH THE BUTTON AREA AT THE BUTTOM CENTER-->
