@@ -787,7 +787,7 @@ App.controller('AppCtrl', ['$scope', '$localStorage', '$window',
     function ($scope, $localStorage, $window) {
         // Template Settings
         $scope.oneui = {
-            version: '3.1', // Template version
+            version: '1.0.0', // Template version
             localStorage: false, // Enable/Disable local storage
             settings: {
                 activeColorTheme: false, // Set a color theme of your choice, available: 'amethyst', 'city, 'flat', 'modern' and 'smooth'
