@@ -16,17 +16,21 @@ var App = angular.module('app', [
 // Router configuration
 App.config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/login');
+        $urlRouterProvider.otherwise('/basic');
         $stateProvider
             .state('angularjs', {
                 url: '/angularjs',
                 templateUrl: 'assets/views/ready_angularjs.html'
             })
-            .state('/splash', {
+            .state('splash', {
                 url: '/splash',
                 templateUrl: 'assets/views/apricon/splash.html'
             })
-            .state('/login', {
+            .state('basic', {
+                url: '/basic',
+                templateUrl: 'assets/views/apricon/basic.html'
+            })
+            .state('login', {
                 url: '/login',
                 templateUrl: 'assets/views/apricon/login.html'
             })
