@@ -141,6 +141,18 @@ App.controller('UiActivityCtrl', ['$scope', '$localStorage', '$window',
     }
 ]);
 
+// login controller
+App.controller('login', ['$scope', '$location',
+    function($scope, $location) {
+        $scope.clicked = function() {
+            $location.path('/dashboard.html');
+        }
+
+        // Init SweetAlert
+        sweetAlert();
+    }
+]);
+
 // UI Elements Chat Controller
 App.controller('UiChatCtrl', ['$scope', '$localStorage', '$window',
     function ($scope, $localStorage, $window) {
