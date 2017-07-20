@@ -16,7 +16,7 @@ var App = angular.module('app', [
 // Router configuration
 App.config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/dashboard');
+        $urlRouterProvider.otherwise('/login');
         $stateProvider
             .state('angularjs', {
                 url: '/angularjs',
