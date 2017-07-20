@@ -17,6 +17,7 @@ var App = angular.module('app', [
 App.config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/login');
+        //surlRouterProvider.otherwise('/dashboard');
         $stateProvider
             .state('angularjs', {
                 url: '/angularjs',
@@ -441,7 +442,7 @@ App.config(['$stateProvider', '$urlRouterProvider',
                     }]
                 }
             })
-            .state('main-menu', {
+            .state('mainmenu', {
                 url: '/main-menu',
                 templateUrl: 'assets/views/apricon/mainmenu.html'
             })
@@ -449,9 +450,9 @@ App.config(['$stateProvider', '$urlRouterProvider',
                 url: '/layout',
                 templateUrl: 'assets/views/api_layout.html'
             })
-            .state('create', {
-                url: '/create',
-                templateUrl: 'assets/views/ready_create.html'
+            .state('log', {
+                url: '/log',
+                templateUrl: 'assets/views/apricon/log.html'
             });
     }
 ]);
