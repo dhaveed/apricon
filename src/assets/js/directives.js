@@ -520,6 +520,19 @@ App.directive('jsSelect2', function ($timeout) {
     };
 });
 
+
+
+//App.directive('jstext2', function () {
+//    return {
+//      link: function (scope, element, attrs) {
+//            jQuery(element).text2():
+//
+ //           scope.$watch(attrs.ngModel, function() {
+//
+  //          })
+    //    }
+   // }
+//s})
 // Bootstrap Notify, for more examples you can check out http://bootstrap-growl.remabledesigns.com/
 // By adding the attribute (with custom values) 'data-js-notify="{icon: 'fa fa-check', message: 'Your message!', ... }'
 App.directive('jsNotify', function () {

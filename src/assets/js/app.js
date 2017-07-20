@@ -16,15 +16,23 @@ var App = angular.module('app', [
 // Router configuration
 App.config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/login');
+        $urlRouterProvider.otherwise('/dashboard');
         $stateProvider
             .state('angularjs', {
                 url: '/angularjs',
                 templateUrl: 'assets/views/ready_angularjs.html'
             })
+            .state('/splash', {
+                url: '/splash',
+                templateUrl: 'assets/views/apricon/splash.html'
+            })
             .state('/login', {
                 url: '/login',
                 templateUrl: 'assets/views/apricon/login.html'
+            })
+            .state('/dashboard', {
+                url: '/dashboard',
+                templateUrl: 'assets/views/apricon/dashboard.html'
             })
             .state('dashboard', {
                 url: '/dashboard',
@@ -433,9 +441,9 @@ App.config(['$stateProvider', '$urlRouterProvider',
                     }]
                 }
             })
-            .state('blocks', {
-                url: '/blocks',
-                templateUrl: 'assets/views/api_blocks.html'
+            .state('main-menu', {
+                url: '/main-menu',
+                templateUrl: 'assets/views/apricon/mainmenu.html'
             })
             .state('layout', {
                 url: '/layout',
