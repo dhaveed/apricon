@@ -451,9 +451,9 @@ App.config(['$stateProvider', '$urlRouterProvider',
                 url: '/main-menu',
                 templateUrl: 'assets/views/apricon/mainmenu.html'
             })
-            .state('layout', {
-                url: '/layout',
-                templateUrl: 'assets/views/api_layout.html'
+            .state('account', {
+                url: '/account',
+                templateUrl: 'assets/views/apricon/account.html'
             })
             .state('log', {
                 url: '/log',
