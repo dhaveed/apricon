@@ -720,6 +720,64 @@ App.controller('FormsValidationCtrl', ['$scope', '$localStorage', '$window',
                         required: true,
                         range: [1, 5]
                     },
+                    'course-number': {
+                        required: true,
+                        number: true,
+                        minlength: 1
+                    },
+                    'stored-product': {
+                        required: true,
+                        minlength: 3
+                    },
+                    'product-density': {
+                        required: true,
+                        number: true,
+                        minlength: 1
+                    },
+                    'paint-thickness': {
+                        required: true,
+                        number: true,
+                        minlength: 1
+                    },
+                    'dthick': {
+                        required: true,
+                        number: true,
+                        minlength: 1
+                    },
+                    'ndia': {
+                        required: true,
+                        number: true,
+                        minlength: 1
+                    },
+                    'bstrp': {
+                        required: true,
+                        number: true,
+                        minlength: 1
+                    },
+                    'bthick': {
+                        required: true,
+                        number: true,
+                        minlength: 1
+                    },
+                    'wstrp': {
+                        required: true,
+                        number: true,
+                        minlength: 1
+                    },
+                    'dmethod': {
+                        required: true,
+                        minlength: 1
+                    },
+                    'volume': {
+                        required: true,
+                        number: true,
+                        minlength: 1
+                    },
+                    'temp': {
+                        required: true,
+                        number: true,
+                        minlength: 1
+                    }
                     'val-terms2': {
                         required: true
                     }
@@ -739,6 +797,21 @@ App.controller('FormsValidationCtrl', ['$scope', '$localStorage', '$window',
                         minlength: 'Your password must be at least 5 characters long',
                         equalTo: 'Please enter the same password as above'
                     },
+                    'stored-product': {
+                        required: 'Please provide a product name',
+                        minlength: 'Your product name must be at least 3 characters long'
+                    },
+                    'course-number': 'Please enter a course number!',
+                    'product-density': 'Please enter product density!',
+                    'paint-thickness': 'Please enter paint thickness!',
+                    'dthick': 'Please enter datum thickness!',
+                    'ndia': 'Please enter norminal diameter!',
+                    'bstrp': 'Please enter a bultstrap number!',
+                    'bthick': 'Please enter bultstrap thickness!',
+                    'wstrp': 'Please enter bultstrap width!',
+                    'dmethod': 'Please select a method!',
+                    'volume': 'Please enter deadstock volume!',
+                    'temp': 'Please provide a temperature!',
                     'val-select22': 'Please select a value!',
                     'val-select2-multiple2': 'Please select at least 2 values!',
                     'val-suggestions2': 'What can we do to become better?',
