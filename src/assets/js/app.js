@@ -453,7 +453,7 @@ App.config(['$stateProvider', '$urlRouterProvider',
             })
             .state('account', {
                 url: '/account',
-                templateUrl: 'assets/views/apricon/accounts.html'
+                templateUrl: 'assets/views/apricon/account.html'
             })
             .state('log', {
                 url: '/log',
