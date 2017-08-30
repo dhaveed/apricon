@@ -182,14 +182,26 @@
                 <li class="nav-main-heading"><span class="sidebar-mini-hide">Quick Cut</span></li>
                 <li>
                     <a data-ui-sref="mainmenu" data-ui-sref-active="active">
-                        <i class="si si-frame"></i><span class="sidebar-mini-hide">Main Menu</span>
+                        <i class="si si-frame"></i><span class="sidebar-mini-hide">Main-Menu</span>
                     </a>
                 </li>
-                <li>
-                    <a data-ui-sref="account" data-ui-sref-active="active">
-                        <i class="si si-user"></i><span class="sidebar-mini-hide">Account</span>
-                    </a>
+              
+                <li data-ng-class="{open: (path.indexOf('/tables/') > -1)}">
+                    <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-user"></i><span class="sidebar-mini-hide">Account</span></a>
+                    <ul>
+                        <li>
+                            <a data-ui-sref="tablesTools" data-ui-sref-active="active"><i class="si si-badge"></i>Go Premium</a>
+                        </li>
+                        <li>
+                            <a data-ui-sref="uiColorThemes" data-ui-sref-active="active"><i class="fa fa-heart-o"></i>Theme</a>
+                        </li>
+                        <li>
+                            <a data-ui-sref="account" data-ui-sref-active="active"><i class="fa fa-google-wallet"></i>My Wallet</a>
+                        </li>
+                    </ul>
                 </li>
+
+
                 <li>
                     <a data-ui-sref="log" data-ui-sref-active="active">
                         <i class="fa fa-file-o"></i><span class="sidebar-mini-hide">Logs</span>

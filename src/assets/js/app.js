@@ -28,9 +28,9 @@ App.config(['$stateProvider', '$urlRouterProvider',
                 url: '/splash',
                 templateUrl: 'assets/views/apricon/splash.html'
             })
-            .state('basic', {
-                url: '/basic',
-                templateUrl: 'assets/views/apricon/basic.html'
+            .state('feedata', {
+                url: '/feedata',
+                templateUrl: 'assets/views/apricon/feedata.html'
             })
             .state('login', {
                 url: '/login',
