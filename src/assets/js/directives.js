@@ -164,9 +164,9 @@ App.directive('jsYearCopy', function () {
     return {
         link: function (scope, element) {
             var gdate     = new Date();
-            var copyright = '2015';
+            var copyright = '2017';
 
-            if (gdate.getFullYear() !== 2015) {
+            if (gdate.getFullYear() !== 2017) {
                 copyright = copyright + '-' + gdate.getFullYear().toString().substr(2,2);
             }
 
